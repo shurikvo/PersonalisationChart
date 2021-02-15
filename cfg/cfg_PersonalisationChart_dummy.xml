@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Windows-1251"?>
+<config>
+	<product>
+		<title>ЕКП</title>
+		<type>EKP</type>
+		<DBServer>111.222.333.444</DBServer>
+		<DBBase>DataBase1</DBBase>
+		<DBUser>user</DBUser>
+		<DBPsw>password</DBPsw>
+		<Query>select COUNT(*) Count,convert(varchar,PersoDate,102) Date from dbo.EKP_Card_tb where PersoDate is not NULL group by convert(varchar,PersoDate,102) order by convert(varchar,PersoDate,102)</Query>
+	</product>
+	<product>
+		<title>Тройка с банком</title>
+		<type>TrB</type>
+		<DBServer>111.222.333.444</DBServer>
+		<DBBase>DataBase2</DBBase>
+		<DBUser>user</DBUser>
+		<DBPsw>password</DBPsw>
+		<Query>select COUNT(*) Count,convert(varchar,DatePerso,102) Date from dbo.TroikaBank_Detail_tb where DatePerso is not NULL group by convert(varchar,DatePerso,102) order by convert(varchar,DatePerso,102)</Query>
+	</product>
+</config>
